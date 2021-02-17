@@ -1,6 +1,6 @@
 {
   "name": "notes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aplicación para escribir, guardar, eliminar y editar notas",
   "main": "index.js",
   "scripts": {

@@ -19,21 +19,29 @@ form.onsubmit = (e) => {
 }
 
 function getNote(editing) {
-  const titleValue = titleInput.value
-  const textValue = textInput.value
-
-  const note = {
-    title: titleValue,
-    text: textValue
-  }
-
-  titleInput.value = ''
-  textInput.value = ''
-
-  if(!editing) {
-    saveNote(note)
+  if(titleInput.value == '' && textInput.value == '') {
+    alert('Reciba un cordial saludo del creador. Porfavor inserte un mensaje no se pase de verga sino va a escribir nada no use esta página. Gracias, que tenga buen día')
+  } else if(titleInput.value == '') {
+    alert('Debe ingresar un titulo')
+  } else if(textInput.value == '') {
+    alert('Debe ingresar texto')
   } else {
-    return note
+    const titleValue = titleInput.value
+    const textValue = textInput.value
+
+    const note = {
+      title: titleValue,
+      text: textValue
+    }
+
+    titleInput.value = ''
+    textInput.value = ''
+
+    if(!editing) {
+      saveNote(note)
+    } else {
+      return note
+    }
   }
 }
 
