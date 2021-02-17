@@ -1,0 +1,237 @@
+:root {
+  --darkBlue-color: #04091E;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'/*, sans-serif;*/
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: inherit;
+  align-items: inherit;
+  grid-template-columns: inherit;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  height: 100%;
+} 
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+
+/* ====== Header ====== */
+
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background: var(--darkBlue-color);
+  color: #ffffff;
+  user-select: none;
+}
+
+.container__header {
+  display: grid;
+  padding: 5px 0;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new__note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.new__note:hover {
+  background: lightblue;
+  transform: scale(1.1);
+}
+
+/* ====== Main ====== */
+
+main {
+  width: 100%;
+  padding: 70px 0 30px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.container__main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: flex-start;  
+  grid-gap: 20px;
+}
+
+/* ====== Main: form ====== */
+
+.menu__notes {
+  display: grid;
+  /* height: 100%; */
+  text-align: center;
+  grid-gap: 50px;
+}
+
+.note__form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  background: white;
+  margin-top: 20px;
+}
+
+.note__form h2 {
+  margin-bottom: 10px;
+  color: var(--darkBlue-color);
+}
+
+.note__form textarea {
+  height: 100%;
+}
+
+.note__form__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  box-shadow: 0 0 8px 0px #cdcdcd;
+  border-radius: 10px;
+  resize: none;
+}
+
+.note__form__submit {
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  border-radius: 15px;
+  background: none;
+  transition: .6s;
+  width: 150px;
+  margin: 0 calc(100% - 150px);
+  cursor: pointer;
+}
+
+.note__form__submit:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  background: var(--darkBlue-color);
+  color: white;
+}
+
+/* ====== Main: list ====== */
+
+.note__list h1 {
+  color: var(--darkBlue-color);
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.note {
+  /* display: flex; */
+  flex-direction: column;
+  padding: 20px ;
+  border-radius: 10px;
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  margin-bottom: 20px;
+  background: white;
+}
+
+.note__list__edit, .note__list__delete {
+  border: none;
+  outline: none;
+  margin: 10px 10px 0 0;
+  padding: 8px 15px;
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  border-radius: 15px;
+  background: none;
+  transition: .3s;
+  width: 80px;
+  cursor: pointer;
+}
+
+.note__list__edit:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  background: var(--darkBlue-color);
+  color: white;
+}
+
+.note__list__delete:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  background: red;
+  color: white;
+}
+
+.note__on__edit {
+  background-color: var(--darkBlue-color);
+  color: white;
+}
+
+.button__on__edit {
+  background: lightblue;
+  width: 100px;
+  color: var(--darkBlue-color);
+  box-shadow: 0 0 12px 0px #273368;
+}
+
+.button__on__edit:hover {
+  background-color: lightblue;
+  color: var(--darkBlue-color);
+  box-shadow: 0 0 12px 0px #273368;
+}
+
+/* ====== Footer ====== */
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background: var(--darkBlue-color);
+  text-align: center;
+  font-size: 12px;
+  z-index: 2;
+  color: white;
+  /* position: relative;
+  bottom: 0; */
+  align-self: flex-end;
+}
