@@ -104,10 +104,8 @@ function displayNote() {
 
         buttonToEdit.onclick = (e) => {
           e.preventDefault()
-          console.log('Editando...')
           let edit = true
           let note = getNote(edit)
-          // console.log(note)
 
           const notes = JSON.parse(localStorage.getItem('notes'))
           notes[index].title = note.title
@@ -144,5 +142,3 @@ function dontHaveNotes() {
   p.textContent = 'No se ah creado ninguna tarea.'
   containerNotes.appendChild(p)
 }
-
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam perferendis, voluptatum vitae officiis inventore fugit ratione beatae quo eveniet voluptate autem, cupiditate nisi eum amet provident optio officia similique iure.
