@@ -1,12 +1,14 @@
 :root {
   --darkBlue-color: #04091E;
+  --error-color: red;
+  --reminderPurple: #580a82;
 }
 
 * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins'/*, sans-serif;*/
+  font-family: 'Poppins', sans-serif;
 }
 
 li {
@@ -137,6 +139,16 @@ main {
   resize: none;
 }
 
+.note__form__select {
+  padding: 6px;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px 0px #cdcdcd;
+  border-radius: 10px;
+}
+
 .note__form__submit {
   border: none;
   outline: none;
@@ -151,10 +163,31 @@ main {
   cursor: pointer;
 }
 
-.note__form__submit:hover {
+.note__form__submit:hover, .note__form__submit:focus {
   transform: scale(1.01);
   box-shadow: 0 0 13px 0px #cdcdcd;
   background: var(--darkBlue-color);
+  color: white;
+}
+
+.note__form__submit__reminder {
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  border-radius: 15px;
+  background: none;
+  transition: .6s;
+  width: 150px;
+  margin: 0 calc(100% - 150px);
+  cursor: pointer;
+}
+
+.note__form__submit__reminder:hover, .note__form__submit__reminder:focus {
+  transform: scale(1.01);
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  background: var(--reminderPurple);
   color: white;
 }
 
@@ -176,7 +209,7 @@ main {
   background: white;
 }
 
-.note__list__edit, .note__list__delete {
+.note__list__edit, .note__list__delete, .note__list__reminder {
   border: none;
   outline: none;
   margin: 10px 10px 0 0;
@@ -185,26 +218,37 @@ main {
   border-radius: 15px;
   background: none;
   transition: .3s;
-  width: 80px;
   cursor: pointer;
 }
 
-.note__list__edit:hover {
+.note__list__edit:hover, .note__list__edit:focus {
   transform: scale(1.01);
   box-shadow: 0 0 13px 0px #cdcdcd;
   background: var(--darkBlue-color);
   color: white;
 }
 
-.note__list__delete:hover {
+.note__list__delete:hover, .note__list__delete:focus {
   transform: scale(1.01);
   box-shadow: 0 0 13px 0px #cdcdcd;
-  background: red;
+  background: var(--error-color);
+  color: white;
+}
+
+.note__list__reminder:hover, .note__list__reminder:focus {
+  transform: scale(1.01);
+  box-shadow: 0 0 13px 0px #cdcdcd;
+  background: var(--reminderPurple);
   color: white;
 }
 
 .note__on__edit {
   background-color: var(--darkBlue-color);
+  color: white;
+}
+
+.note__on__reminder {
+  background-color: var(--reminderPurple);
   color: white;
 }
 
@@ -215,11 +259,33 @@ main {
   box-shadow: 0 0 12px 0px #273368;
 }
 
-.button__on__edit:hover {
+.button__on__edit:hover, .button__on__edit:focus {
   background-color: lightblue;
   color: var(--darkBlue-color);
   box-shadow: 0 0 12px 0px #273368;
 }
+
+.button__on__reminder {
+  background: white;
+  color: var(--darkBlue-color);
+  box-shadow: 0 0 12px 0px #470380;
+}
+
+.button__on__reminder:hover, .button__on__reminder:focus {
+  background-color: white;
+  color: var(--darkBlue-color);
+  box-shadow: 0 0 12px 0px #470380;
+}
+
+.container__select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
 
 /* ====== Footer ====== */
 
@@ -231,7 +297,5 @@ footer {
   font-size: 12px;
   z-index: 2;
   color: white;
-  /* position: relative;
-  bottom: 0; */
   align-self: flex-end;
 }
