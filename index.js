@@ -67,9 +67,9 @@
 
     if(localStorage.key(0) && (localStorage.getItem('notes') != '[]')){
       containerNotes.innerHTML = ''
+      let i = 1
 
       notes.forEach((note, index) => {
-        let i = index++
         // Create tags for each note 
         const li = document.createElement('li')
         const h4 = document.createElement('h4')
@@ -77,7 +77,7 @@
         const buttonEdit = document.createElement('button')
         const buttonDelete = document.createElement('button')
 
-        h4.textContent = `${i}. ${note.title}`
+        h4.textContent = `${i++}. ${note.title}`
         p.textContent = note.text
         buttonEdit.textContent = 'Editar' 
         buttonDelete.textContent = 'Eliminar'
