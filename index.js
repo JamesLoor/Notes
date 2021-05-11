@@ -69,7 +69,7 @@
       containerNotes.innerHTML = ''
 
       notes.forEach((note, index) => {
-        let i = 1
+        let i = index++
         // Create tags for each note 
         const li = document.createElement('li')
         const h4 = document.createElement('h4')
@@ -77,7 +77,7 @@
         const buttonEdit = document.createElement('button')
         const buttonDelete = document.createElement('button')
 
-        h4.textContent = `${i++}. ${note.title}`
+        h4.textContent = `${i}. ${note.title}`
         p.textContent = note.text
         buttonEdit.textContent = 'Editar' 
         buttonDelete.textContent = 'Eliminar'
