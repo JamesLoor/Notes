@@ -209,7 +209,7 @@ main {
   background: white;
 }
 
-.note__list__edit, .note__list__delete, .note__list__reminder {
+.note__list__edit, .note__list__delete, .note__list__testing {
   border: none;
   outline: none;
   margin: 10px 10px 0 0;

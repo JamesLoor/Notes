@@ -23,17 +23,17 @@
   <main>
     <div class="container__main wrapper">
       <div class="testing">
-        <form id="formToCreateANote" class="note__form">
+        <form id="formNote" class="note__form">
           <h2>Registrar Nota</h2>
-          <input type="text" class="note__form__input" placeholder="Titulo">
-          <textarea cols="30" rows="10" class="note__form__input" placeholder="Nota"></textarea>
-          <input type="submit" value="Guardar" class="note__form__submit">
+          <input id="title" type="text" class="note__form__input" placeholder="Titulo">
+          <textarea id="text" cols="30" rows="10" class="note__form__input" placeholder="Nota"></textarea>
+          <input id="buttonSubmit" type="submit" value="Guardar" class="note__form__submit">
         </form> 
       </div>
       
       <div class="note__list">
         <h1>Lista de notas</h1>
-        <ul id="containerList">
+        <ul id="containerNote">
           
         </ul>
       </div>
@@ -44,7 +44,8 @@
     <code>Copyright (c) 2021 James<br>Desarrollado por James Loor</code>
   </footer>
 
-  <script src="./index.js"></script>
+  <!-- <script src="./index.js"></script> -->
+  <script src="./app.js"></script>
   <!-- <script src="./classIndex.js"></script> -->
 </body>
 </html>
