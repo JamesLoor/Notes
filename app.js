@@ -35,10 +35,8 @@ const saveNote = (note) => {
   noteList.push(note)
 
   if (!isLocalStorageUsed()) {
-    console.log('Deactive')
     localStorage.setItem('Notes', JSON.stringify(noteList))
   } else {
-    console.log('Active')
     noteList = JSON.parse(localStorage.getItem('Notes'))
     noteList.push(note)
     localStorage.setItem('Notes', JSON.stringify(noteList))
